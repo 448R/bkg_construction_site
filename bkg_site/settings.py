@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+SECRET_KEY=votre_cle_secrete_ici
+DEBUG=True
 import dj_database_url
 from dotenv import load_dotenv
 
