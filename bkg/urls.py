@@ -1,6 +1,10 @@
 from django.urls import path
-from .views import home
+from . import views
 
 urlpatterns = [
-    path('', home, name='home'),
+    path('', views.home, name='home'),
+    path('services/', views.services, name='services'),
+    path('references/', views.references, name='references'),
+    path('contact/', views.contact, name='contact'),
+    path('api/chat/', views.chat_api, name='chat_api'),
 ]

@@ -49,17 +49,20 @@ def contact(request):
 
 def chat_api(request):
     user_message = request.GET.get('message', '').lower()
+
+    # Mapping des mots-clés vers les réponses pour une meilleure extensibilité
+    responses = {
+        ('service', 'construction'): "BKG propose des services en Construction, Réhabilitation, Génie Civil et Clôtures.",
+        ('contact', 'appel'): "Vous pouvez nous joindre au (+225) 07 47 63 64 86 ou par email à guillaumebrou27@gmail.com.",
+        ('adresse', 'lieu'): "Nous sommes situés à Angré 8ème Tranche, Abidjan, Côte d'Ivoire.",
+        ('prix', 'devis'): "Pour un devis personnalisé, veuillez utiliser notre formulaire de contact ou nous appeler directement.",
+    }
+
+    response = "Bonjour ! Je suis BKG. Comment puis-je vous aider dans votre projet de construction ?"
     
-    # Logique simple d'assistance IA (simulée)
-    if 'service' in user_message or 'construction' in user_message:
-        response = "BKG propose des services en Construction, Réhabilitation, Génie Civil et Clôtures."
-    elif 'contact' in user_message or 'appel' in user_message:
-        response = "Vous pouvez nous joindre au (+225) 07 47 63 64 86 ou par email à guillaumebrou27@gmail.com."
-    elif 'adresse' in user_message or 'lieu' in user_message:
-        response = "Nous sommes situés à Angré 8ème Tranche, Abidjan, Côte d'Ivoire."
-    elif 'prix' in user_message or 'devis' in user_message:
-        response = "Pour un devis personnalisé, veuillez utiliser notre formulaire de contact ou nous appeler directement."
-    else:
-        response = "Bonjour ! Je suis BKG. Comment puis-je vous aider dans votre projet de construction ?"
+    for keywords, msg in responses.items():
+        if any(kw in user_message for kw in keywords):
+            response = msg
+            break
 
     return JsonResponse({'response': response})

@@ -16,13 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from bkg import views as bkg_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', bkg_views.home, name='home'),
-    path('services/', bkg_views.services, name='services'),
-    path('references/', bkg_views.references, name='references'),
-    path('contact/', bkg_views.contact, name='contact'),
-    path('api/chat/', bkg_views.chat_api, name='chat_api'),
+    path('', include('bkg.urls')),
 ]
