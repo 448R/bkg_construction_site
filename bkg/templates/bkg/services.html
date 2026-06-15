@@ -1,0 +1,71 @@
+{% extends 'bkg/base.html' %}
+{% load static %}
+{% block content %}
+<section class="py-5 text-center border-bottom border-primary">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Nos Services</h1>
+        <p class="lead">L'expertise BKG au service de vos infrastructures.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container reveal">
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <img src="{% static 'bkg/img/const.jpg' %}" class="card-img-top" alt="Construction">
+                    <div class="card-body">
+                        <h5 class="card-title">Construction</h5>
+                        <p class="card-text">Bâtiments résidentiels et commerciaux livrés avec professionnalisme.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <img src="{% static 'bkg/img/rehab.jpg' %}" class="card-img-top" alt="Réhabilitation">
+                    <div class="card-body">
+                        <h5 class="card-title">Réhabilitation</h5>
+                        <p class="card-text">Rénovation et transformation respectueuses des ouvrages existants.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <img src="{% static 'bkg/img/gc.jpg' %}" class="card-img-top" alt="Génie Civil">
+                    <div class="card-body">
+                        <h5 class="card-title">Génie civil</h5>
+                        <p class="card-text">Assainissement, voiries et infrastructures techniques durables.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <img src="{% static 'bkg/img/cloture.jpg' %}" class="card-img-top" alt="Clôtures">
+                    <div class="card-body">
+                        <h5 class="card-title">Clôtures</h5>
+                        <p class="card-text">Solutions de délimitation fiables et esthétiques pour vos sites.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <img src="{% static 'bkg/img/amenage.jpg' %}" class="card-img-top" alt="Aménagements">
+                    <div class="card-body">
+                        <h5 class="card-title">Aménagements</h5>
+                        <p class="card-text">Espaces extérieurs fonctionnels et valorisants pour vos projets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card service-card h-100 shadow-sm">
+                    <img src="{% static 'bkg/img/suivi.jpg' %}" class="card-img-top" alt="Suivi de chantier">
+                    <div class="card-body">
+                        <h5 class="card-title">Suivi de chantier</h5>
+                        <p class="card-text">Pilotage de projet réactif et communication claire au quotidien.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

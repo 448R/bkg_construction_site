@@ -1,0 +1,280 @@
+﻿{% extends 'bkg/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<section class="hero" style="background-image: url('{% static 'bkg/img/image3.jpeg' %}');">
+    <div class="hero-overlay"></div>
+    <div class="container h-100 py-5">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-7">
+                <div class="hero-content text-white">
+                    <span class="eyebrow text-uppercase fw-semibold">BKG Génie Construction</span>
+                    <h1 class="display-5 fw-bold mb-4 text-light">Construisons des projets durables, sûrs et maîtrisés.</h1>
+                    <p class="lead mb-4 text-light">Bâtiment, génie civil et aménagements extérieurs en Côte d'Ivoire, exécutés avec rigueur, sécurité et qualité.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+                        <button class="btn btn-primary btn-lg" onclick="scrollToContact()">Contactez-nous</button>
+                        <a href="{% url 'references' %}" class="btn btn-outline-light btn-lg">Voir nos références</a>
+                    </div>
+                    <div class="hero-chips d-flex flex-wrap gap-2">
+                        <span class="chip">Sécurité chantier</span>
+                        <span class="chip">Engagement durable</span>
+                        <span class="chip">Pilotage qualité</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="presentation" class="section-alt py-5">
+    <div class="container">
+        <div class="row gx-5 gy-4 align-items-center">
+            <div class="col-lg-6 reveal-left">
+                <span class="section-title">Présentation</span>
+                <h2 class="mb-3">Une entreprise locale au standard international</h2>
+                <p class="text-muted">BKG Génie Construction SARL accompagne ses clients sur les phases étude, construction, réhabilitation et aménagement, avec un pilotage professionnel et une exigence de qualité.</p>
+                <ul class="list-unstyled mt-4 text-muted feature-list counter-wrap">
+                    <li><strong>+<span class="counter" data-target="10">0</span> ans</strong> d'expérience sur des projets bâtis et infrastructures.</li>
+                    <li><strong>Travaux d'habitat, commercial, industriel</strong> et aménagement extérieur.</li>
+                    <li><strong>Gestion HSE</strong> et respect des normes environnementales.</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 reveal-right">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">Nos engagements</h5>
+                        <p class="card-text text-muted">Chaque chantier est piloté avec un contrôle constant de la qualité, une attention renforcée à la sécurité et une approche durable du chantier.</p>
+                        <div class="row g-3 mt-4">
+                            <div class="col-6">
+                                <div class="feature-box">
+                                    <strong>Sécurité</strong>
+                                    <p class="mb-0">Chantiers conformes aux exigences HSE.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-box">
+                                    <strong>Qualité</strong>
+                                    <p class="mb-0">Matériaux et exécution contrôlés.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-box">
+                                    <strong>Délais</strong>
+                                    <p class="mb-0">Respect des plannings et des livraisons.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-box">
+                                    <strong>Suivi</strong>
+                                    <p class="mb-0">Accompagnement personnalisé de projet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-5">
+    <div class="container reveal">
+        <div class="section-header text-center mb-5">
+            <span class="section-title">Nos services</span>
+            <h2>Domaines d'intervention</h2>
+            <p>Des solutions complètes pour le bâtiment, le génie civil et les aménagements extérieurs.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-4 reveal">
+                <div class="card service-card h-100 shadow-sm delay-1">
+                    <img src="{% static 'bkg/img/const.jpg' %}" class="card-img-top" alt="Construction">
+                    <div class="card-body">
+                        <h5 class="card-title">Construction</h5>
+                        <p class="card-text">Bâtiments résidentiels et commerciaux livrés avec professionnalisme.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4 reveal">
+                <div class="card service-card h-100 shadow-sm delay-2">
+                    <img src="{% static 'bkg/img/rehab.jpg' %}" class="card-img-top" alt="Réhabilitation">
+                    <div class="card-body">
+                        <h5 class="card-title">Réhabilitation</h5>
+                        <p class="card-text">Rénovation et transformation respectueuses des ouvrages existants.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4 reveal">
+                <div class="card service-card h-100 shadow-sm delay-3">
+                    <img src="{% static 'bkg/img/gc.jpg' %}" class="card-img-top" alt="Génie Civil">
+                    <div class="card-body">
+                        <h5 class="card-title">Génie civil</h5>
+                        <p class="card-text">Assainissement, voiries et infrastructures techniques durables.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4 reveal">
+                <div class="card service-card h-100 shadow-sm delay-1">
+                    <img src="{% static 'bkg/img/cloture.jpg' %}" class="card-img-top" alt="Clôtures">
+                    <div class="card-body">
+                        <h5 class="card-title">Clôtures</h5>
+                        <p class="card-text">Solutions de délimitation fiables et esthétiques pour vos sites.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4 reveal">
+                <div class="card service-card h-100 shadow-sm delay-2">
+                    <img src="{% static 'bkg/img/amenage.jpg' %}" class="card-img-top" alt="Aménagements">
+                    <div class="card-body">
+                        <h5 class="card-title">Aménagements</h5>
+                        <p class="card-text">Espaces extérieurs fonctionnels et valorisants pour vos projets.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4 reveal">
+                <div class="card service-card h-100 shadow-sm delay-3">
+                    <img src="{% static 'bkg/img/suivi.jpg' %}" class="card-img-top" alt="Suivi de chantier">
+                    <div class="card-body">
+                        <h5 class="card-title">Suivi de chantier</h5>
+                        <p class="card-text">Pilotage de projet réactif et communication claire au quotidien.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="references" class="py-5">
+    <div class="container reveal">
+        <div class="section-header text-center mb-5">
+            <span class="section-title">Références</span>
+            <h2>Projets récents</h2>
+            <p>Des réalisations maîtrisées qui illustrent notre capacité à livrer des chantiers structurés et conformes aux attentes.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-8">
+                    <div id="photoCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000">
+                        <div class="carousel-indicators">
+                            {% for i in photo_range %}
+                            <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label="Photo {{ i }}"></button>
+                            {% endfor %}
+                        </div>
+                        <div class="carousel-inner">
+                            {% for i in photo_range %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                                <img src="{% static 'bkg/img/image' %}{{ i }}.jpeg" class="d-block w-100" alt="Chantier - Photo {{ i }}" style="height: 500px; object-fit: cover;">
+                                <div class="carousel-caption d-none d-md-block py-3"><h5>Photo {{ i }}</h5></div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Précédent</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Suivant</span>
+                        </button>
+                    </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex align-items-start gap-3 border-bottom border-primary pb-2">
+                                <img src="{% static 'bkg/img/const.jpg' %}" class="rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Construction">
+                                <div>
+                                <h5>Construction</h5>
+                                    <p class="small mb-0">Bâtiments résidentiels et commerciaux</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 border-bottom border-primary pb-2">
+                                <img src="{% static 'bkg/img/rehab.jpg' %}" class="rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Réhabilitation">
+                                <div>
+                                <h5>Réhabilitation</h5>
+                                    <p class="small mb-0">Rénovation d'ouvrages existants</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 border-bottom border-primary pb-2">
+                                <img src="{% static 'bkg/img/gc.jpg' %}" class="rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Génie Civil">
+                                <div>
+                                 <h5>Génie Civil</h5>
+                                    <p class="small mb-0">Infrastructures et assainissement</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3">
+                                <img src="{% static 'bkg/img/cloture.jpg' %}" class="rounded" style="width: 80px; height: 80px; object-fit: cover;" alt="Clôtures">
+                                <div>
+                                 <h5>Clôtures</h5>
+                                    <p class="small mb-0">Sécurisation et délimitation de sites</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="mb-2">Vous avez un projet ? Discutons-en.</h2>
+                <p class="mb-0">Nous transformons vos idées en réalisations concrètes, fiables et durables.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <button class="btn btn-outline-light btn-lg" onclick="scrollToContact()">Écrire à l'équipe</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <h2>Contactez-nous</h2>
+                {% if submitted %}
+                    <div class="alert alert-success" role="alert">
+                        Merci {{ contact_name }} ! Votre message a été envoyé. Nous vous répondrons bientôt à {{ contact_email }}.
+                    </div>
+                {% endif %}
+                <form id="contactForm" method="post" class="card p-4 shadow-sm">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" value="{{ contact_name }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" value="{{ contact_email }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Téléphone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Votre numéro de téléphone" value="{{ contact_phone }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Décrivez votre projet" required>{{ contact_message }}</textarea>
+                    </div>
+                    <button id="submitBtn" type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Nous joindre</h5>
+                        <p class="mb-1"><strong>Téléphone :</strong><br>(+225) 07 47 63 64 86<br>(+225) 05 45 34 00 41</p>
+                        <p class="mb-1"><strong>E-mail :</strong><br>guillaumebrou27@gmail.com</p>
+                        <p class="mb-0"><strong>Adresse :</strong><br>Angré 8ᵉ Tranche, Abidjan, Côte d'Ivoire</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

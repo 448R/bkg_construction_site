@@ -1,0 +1,48 @@
+{% extends 'bkg/base.html' %}
+{% load static %}
+{% block content %}
+<section class="py-5 text-center border-bottom border-primary">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Nos Références</h1>
+        <p class="lead">Découvrez nos réalisations majeures.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container reveal">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div id="photoCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        {% for i in photo_range %}
+                        <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></button>
+                        {% endfor %}
+                    </div>
+                    <div class="carousel-inner">
+                        {% for i in photo_range %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <img src="{% static 'bkg/img/image' %}{{ i }}.jpeg" class="d-block w-100" alt="Chantier {{ i }}" style="height: 600px; object-fit: cover;">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>Détails techniques</h3>
+                        <hr>
+                        <p>Nos projets respectent les normes <strong>HSE</strong> et utilisent des matériaux de haute qualité pour garantir la pérennité des ouvrages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
